@@ -8,10 +8,12 @@ class FoodPage extends StatefulWidget {
 class _FoodPageState extends State<FoodPage> {
   int _currentIndex = 0;
   static Map<int, List> _brandMap = {
-    0: ['Whiska', '30'],
-    1: ['JUNAECats', '1'],
-    2: ['ScumFood', '31'],
-    3: ['IDDDDD', '22']
+    0: ['Nice Cat Squizz', '30'],
+    1: ['Junaeb Cats', '2'],
+    2: ['CarritosCats', '31'],
+    3: ['TheTrueSopaipaTaste', '24'],
+    4: ['GastonGatuso', '22'],
+    5: ['isMathRelatedtoScience', '50']
   };
 
   double _amount = 1;
@@ -20,7 +22,7 @@ class _FoodPageState extends State<FoodPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buy sum food"),
+        title: Text("Food Pricing Viewer"),
       ),
       body: SafeArea(
           child: Column(
@@ -30,9 +32,10 @@ class _FoodPageState extends State<FoodPage> {
               height: 250,
               child: Center(
                 child: Container(
+                  color: Colors.blue[300],
                   child: Text(
                     _brandMap[_currentIndex][0],
-                    style: TextStyle(color: Colors.black, fontSize: 22),
+                    style: TextStyle(color: Colors.black, fontSize: 40,),
                   ),
                 ),
               ),
