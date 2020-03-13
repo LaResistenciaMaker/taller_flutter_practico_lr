@@ -32,7 +32,6 @@ class _FoodPageState extends State<FoodPage> {
               height: 250,
               child: Center(
                 child: Container(
-                  color: Colors.blue[300],
                   child: Text(
                     _brandMap[_currentIndex][0],
                     style: TextStyle(color: Colors.black, fontSize: 40,),
