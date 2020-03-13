@@ -29,7 +29,7 @@ class _CatDetailsState extends State<CatDetails> {
                   return text;
                 }(),
                 builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-                  if(snapshot.data!=null){
+                  if(snapshot.hasData){
                     return Text(snapshot.data, style: TextStyle(fontSize: 20),);
                   } else {
                     return Text("cargando");

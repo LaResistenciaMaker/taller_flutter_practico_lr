@@ -68,59 +68,75 @@ class Home extends StatelessWidget {
                 children: <Widget>[
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
+                  ),
+                  _OwnCard(
+                    text: "yup!",
+                    image: AssetImage("assets/cat1.jpg"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                   _OwnCard(
                     text: "Nope!",
-                    url: "https://i.blogs.es/3861b2/grumpy-cat/450_1000.png",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
+                  ),
+                  _OwnCard(
+                    text: "Nope!",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
+                  ),
+                  _OwnCard(
+                    text: "Nope!",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
+                  ),
+                  _OwnCard(
+                    text: "Nope!",
+                    image: NetworkImage("https://i.blogs.es/3861b2/grumpy-cat/450_1000.png"),
                   ),
                 ],
               )
@@ -133,10 +149,10 @@ class Home extends StatelessWidget {
 }
 
 class _OwnCard extends StatelessWidget {
-  final String url;
+  final ImageProvider<dynamic> image;
   final String text;
   const _OwnCard({
-    this.url,
+    this.image,
     this.text,
     Key key,
   }) : super(key: key);
@@ -149,7 +165,7 @@ class _OwnCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage(url),
+              image: image,
               fit: BoxFit.contain,
               alignment: Alignment.topCenter),
         ),
@@ -169,6 +185,9 @@ class _OwnCard extends StatelessWidget {
   }
 }
 
+/// [_OwnButton] Mi propio botón
+/// 
+/// Un boton diseñado que acepta un [height] y un [width]
 class _OwnButton extends StatelessWidget {
   final double height;
   final double width;
